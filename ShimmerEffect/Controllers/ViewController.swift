@@ -19,12 +19,13 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        tableView.backgroundColor = .clear
         tableView.register(DetailTableViewCell.self, forCellReuseIdentifier: DetailTableViewCell.identifier)
         tableView.isScrollEnabled = false
         tableView.allowsSelection = false
         title = "Shimmer Effect"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = .black
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
     }
     
     override func viewDidAppear(_ animated: Bool) {

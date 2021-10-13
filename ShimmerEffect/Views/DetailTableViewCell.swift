@@ -18,7 +18,7 @@ class DetailTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .lightGray
+        backgroundColor = .clear
         textLabel?.backgroundColor = .darkGray
         detailTextLabel?.backgroundColor = .darkGray
         textLabel?.text = "                                                                        "
