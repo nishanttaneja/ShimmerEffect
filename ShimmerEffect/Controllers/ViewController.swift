@@ -18,6 +18,8 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
+        tableView.backgroundColor = .clear
         tableView.register(DetailTableViewCell.self, forCellReuseIdentifier: DetailTableViewCell.identifier)
         tableView.isScrollEnabled = false
         tableView.allowsSelection = false
@@ -41,10 +43,12 @@ class ViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.identifier, for: indexPath) as? DetailTableViewCell else {
             return .init()
         }
-        cell.textLabel?.text = "                                                                        "
-        cell.detailTextLabel?.text = "                                                                          "
         cell.startShimmerEffect()
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        60
     }
     
 }

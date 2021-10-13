@@ -18,10 +18,11 @@ class DetailTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-//        textLabel?.text = "                                                         "
-//        detailTextLabel?.text = "                                           "
-        textLabel?.backgroundColor = .init(white: 1, alpha: 0.1)
-        detailTextLabel?.backgroundColor = .init(white: 1, alpha: 0.1)
+        backgroundColor = .lightGray
+        textLabel?.backgroundColor = .darkGray
+        detailTextLabel?.backgroundColor = .darkGray
+        textLabel?.text = "                                                                        "
+        detailTextLabel?.text = "                                                                          "
     }
     
     required init?(coder: NSCoder) {
